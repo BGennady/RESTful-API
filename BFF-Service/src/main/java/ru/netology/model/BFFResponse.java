@@ -8,11 +8,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class BFFResponse {
-    private Users user; // Данные пользователя
-    private Order[] order; // Заказы пользователя
-
-    // Конструктор для инициализации полей
-
+    private Users user; // данные пользователя
+    private Order[] order; // заказы пользователя
 
     public BFFResponse(Users user, Order[] order) {
         this.user = user;

@@ -17,7 +17,6 @@ import ru.netology.service.OrderService;
 // класс принимающий запрос
 public class OrderController {
 
-    // конструктор контроллера, который принимает сервис
     private final OrderService service; // сервис для работы с бизнес-логикой
 
     // конструктор контроллера, который принимает сервис
