@@ -12,7 +12,7 @@
 		<module>Person-Service</module>
 		<module>Order-Service</module>
 		<module>BFF-Service</module>
-	</modules>
+    </modules>
 
 	<dependencyManagement>
 		<dependencies>
