@@ -12,7 +12,8 @@
 		<module>Person-Service</module>
 		<module>Order-Service</module>
 		<module>BFF-Service</module>
-    </modules>
+		<module>API_Gateway</module>
+	</modules>
 
 	<dependencyManagement>
 		<dependencies>
