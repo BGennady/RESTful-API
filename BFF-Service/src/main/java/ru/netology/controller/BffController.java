@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import ru.netology.model.BFFResponse;
 import ru.netology.model.Order;
-import ru.netology.model.Users;
+import ru.netology.model.Person;
 
 @RestController // обрабатывает HTTP запросы
 @RequestMapping("api/site-bff") // устанавливает базовый путь для всех маршрутов
@@ -33,13 +33,13 @@ public class BffController {
 
         // URL для запроса к микросервису, который возвращает данные пользователя по userId
         String userServiceUrl = userUrl + "/" + userId;
-        Users users = restTemplate.getForObject(userServiceUrl, Users.class); // Получаем данные пользователя
+        Person person = restTemplate.getForObject(userServiceUrl, Person.class); // Получаем данные пользователя
 
         // URL для запроса заказов пользователя по userId
         String userOrderUrl = orderUrl + "/" + userId;
         Order[] orders = restTemplate.getForObject(userOrderUrl, Order[].class); // Получаем заказы пользователя
 
         // комбинированный ответ
-        return new BFFResponse(users, orders);
+        return new BFFResponse(person, orders);
     }
 }

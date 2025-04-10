@@ -4,8 +4,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.netology.service.UserService;
-import ru.netology.model.Users;
+import ru.netology.service.PersonService;
+import ru.netology.model.Person;
 
 // аннотация @RestController объединяет @Controller и @ResponseBody,
 @RestController
@@ -13,18 +13,18 @@ import ru.netology.model.Users;
 @RequestMapping("api/users")
 
 // класс принимающий запрос
-public class UserController {
+public class PersonController {
 
-    private final UserService service; // сервис для работы с бизнес-логикой
+    private final PersonService service; // сервис для работы с бизнес-логикой
 
     // конструктор контроллера, который принимает сервис
-    public UserController(UserService service) {
+    public PersonController(PersonService service) {
         this.service = service;
     }
 
     // метод для обработки запроса на получение user по id
     @GetMapping("/{userId}") // аннотация для обработки GET-запроса с параметром id
-    public Users getUserById(@PathVariable long userId) {
-        return service.getById(userId); // возвращаем пост по id. Spring автоматически сериализует его в JSON
+    public Person getUserById(@PathVariable long userId) {
+        return service.getById(userId); // возвращает пост по id. Spring автоматически сериализует его в JSON
     }
 }

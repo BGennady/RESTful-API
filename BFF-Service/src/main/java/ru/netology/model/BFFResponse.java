@@ -8,10 +8,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class BFFResponse {
-    private Users user; // данные пользователя
+    private Person user; // данные пользователя
     private Order[] order; // заказы пользователя
 
-    public BFFResponse(Users user, Order[] order) {
+    public BFFResponse(Person user, Order[] order) {
         this.user = user;
         this.order = order;
     }

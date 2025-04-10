@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Entity
 @Table(name = "USERS", schema = "microservices")
-public class Users {
+public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
