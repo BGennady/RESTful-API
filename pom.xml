@@ -9,7 +9,7 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
-    <!-- Версия Spring Boot указывается напрямую -->
+    <!-- Версия Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -33,7 +33,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 
     <modules>
         <module>Person-Service</module>
