@@ -17,10 +17,11 @@ public class BffController {
     private final RestTemplate restTemplate;
 
     @Value("${services.user}")
-    private String userUrl; // URL для получения данных пользователя
+    private String userUrl; // для получения URL-строки из Congig файла
 
     @Value("${services.order}")
-    private String orderUrl; // URL для получения заказов пользователя
+    private String orderUrl; // для получения URL-строки из Congig файла
+
 
     // конструктор, принимающий RestTemplate
     public BffController(RestTemplate restTemplate) {
