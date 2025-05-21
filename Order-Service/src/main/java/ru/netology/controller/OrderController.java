@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.netology.model.Order;
 import ru.netology.service.OrderService;
 
+import java.util.List;
+
 // аннотация @RestController объединяет @Controller и @ResponseBody,
 
 @RestController
@@ -25,8 +27,8 @@ public class OrderController {
     }
 
     // метод для обработки запроса на получение user по id
-    @GetMapping("/{orderId}") // аннотация для обработки GET-запроса с параметром id
-    public Order getOrderById(@PathVariable long orderId) {
-        return service.getById(orderId); // возвращает пост по id. Spring автоматически сериализует его в JSON
+    @GetMapping("/{id}") // аннотация для обработки GET-запроса с параметром id
+    public List<Order> getOrderById(@PathVariable long id) {
+        return service.getByUserId(id); // возвращает пост по id. Spring автоматически сериализует его в JSON
     }
 }

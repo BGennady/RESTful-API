@@ -1,4 +1,4 @@
-INSERT INTO microservices.ORDERS (userId, totalAmount, currency, quantity) VALUES
+INSERT INTO microservices.orders (user_id, total_amount, currency, quantity) VALUES
 (1, 12999.99, 'RUB', 1),
 (1, 3599.50, 'RUB', 2),
 (2, 22500.00, 'RUB', 1),

@@ -23,8 +23,8 @@ public class PersonController {
     }
 
     // метод для обработки запроса на получение user по id
-    @GetMapping("/{userId}") // аннотация для обработки GET-запроса с параметром id
-    public Person getUserById(@PathVariable long userId) {
-        return service.getById(userId); // возвращает пост по id. Spring автоматически сериализует его в JSON
+    @GetMapping("/{id}") // аннотация для обработки GET-запроса с параметром id
+    public Person getUserById(@PathVariable long id) {
+        return service.getById(id); // возвращает пост по id. Spring автоматически сериализует его в JSON
     }
 }

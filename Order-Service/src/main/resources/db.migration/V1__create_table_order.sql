@@ -1,4 +1,4 @@
-CREATE TABLE microservices.ORDERS (
+CREATE TABLE microservices.orders (
     id BIGSERIAL PRIMARY KEY,
     userId BIGINT NOT NULL,
     totalAmount DOUBLE PRECISION NOT NULL,

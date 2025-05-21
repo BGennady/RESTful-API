@@ -36,6 +36,12 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- Для Flyway драйвера -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+		</dependency>
+
 		<!-- Для тестирования -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
